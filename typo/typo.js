@@ -53,16 +53,11 @@ var Typo = function (dictionary, affData, wordsData, settings) {
 	
 	if (dictionary) {
 		this.dictionary = dictionary;
-		
-		if (this.platform == "chrome") {
-			if (!affData) affData = this._readFile(chrome.extension.getURL("lib/typo/dictionaries/" + dictionary + "/" + dictionary + ".aff"));
-			if (!wordsData) wordsData = this._readFile(chrome.extension.getURL("lib/typo/dictionaries/" + dictionary + "/" + dictionary + ".dic"));
-		} else {
-			var path = settings.dictionaryPath || '';
-			
-			if (!affData) affData = this._readFile(path + "/" + dictionary + "/" + dictionary + ".aff");
-			if (!wordsData) wordsData = this._readFile(path + "/" + dictionary + "/" + dictionary + ".dic");
-		}
+
+    var path = settings.dictionaryPath || '';
+
+    if (!affData) affData = this._readFile(path + "/" + dictionary + "/" + dictionary + ".aff");
+    if (!wordsData) wordsData = this._readFile(path + "/" + dictionary + "/" + dictionary + ".dic");
 		
 		this.rules = this._parseAFF(affData);
 		
