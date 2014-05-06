@@ -1,0 +1,13 @@
+{
+  "name": "typo-js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/beegit/Typo.js",
+  "authors": [
+    "Kris Ciccarello <kciccarello@gmail.com>"
+  ],
+  "description": "A client-side JavaScript spellchecker that uses Hunspell-style dictionaries.",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
