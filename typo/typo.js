@@ -698,7 +698,7 @@ Typo.prototype = {
     }
 
     function known(words) {
-      if(!this.enabled) {
+      if(!self.enabled) {
         return [];
       }
 
@@ -714,7 +714,7 @@ Typo.prototype = {
     }
 
     function correct(word) {
-      if(!this.enabled) {
+      if(!self.enabled) {
         return [];
       }
 
