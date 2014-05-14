@@ -37,7 +37,7 @@ var Typo = function (dictionary, affData, wordsData, settings) {
 
   this.enabled = false;
 
-  if (dictionary && window.location.protocol !== 'file:') {
+  if (dictionary && window.location.protocol !== 'file:' && ( !("enabled" in settings) || settings.enabled === true )) {
     this.dictionary = dictionary;
     this.enabled = true;
 
